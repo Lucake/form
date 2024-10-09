@@ -40,7 +40,7 @@ form.addEventListener("submit", (e)=>{
 });
 
 //populating input data
-function getInputData(){
+const getInputData = ()=>{
     let dataToPost = new FormData(); //formdata API
 
     //fill name attributes to corresponding values
@@ -52,6 +52,6 @@ function getInputData(){
     return dataToPost;
 }
 
-function clearInputs(){
+const clearInputs = () => {
     document.querySelector('form').reset()
 }

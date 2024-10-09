@@ -4,21 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscrições instituto aliança</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css?1">
 </head>
 <body>
-    <div class="form-wrapper">
-        <h1>Cadastre-se</h1><br>
-        <form method="post" id="form" action="https://docs.google.com/forms/d/e/1FAIpQLSftFYtf4wGYeHQq4oiqiUa2m-pXNkO7yZlyM7ztVeKarpWLgQ/formResponse">
-            <label for="inp1">Nome</label>
-            <input type="text" name="nome" id="input-nome" placeholder="Fulano de tal" required="required" >
-            <label for="inp1">Telefone (com DDD)</label>
-            <input type="text" name="telefone" id="input-telefone" placeholder="(11)95485-5312" required="required">
-            <label for="inp1">E-mail</label>
-            <input type="text" name="email" id="input-email" placeholder="fulando@mail.com" required="required" pattern="[^@\s]+@[^@\s]+" title="e-mail inválido" >
-            <input type="submit" value="Submit">
-        </form>
+    <div class="container">
+        <div class="image">
+            <img src="https://www.institutoalianca.org.br/boletim/julho14/materia3_julho14/ESV_BA_2.jpg" alt="">
+        </div>
+        <div class="form-wrapper">
+            <img src="https://i.imgur.com/ZtR3e8T.png" class="logo" alt="">
+            <h1>Cadastre-se</h1><br>
+            <form method="post" id="form">
+                <label for="inp1">Nome</label>
+                <input type="text" name="nome" id="input-nome" placeholder="Fulano de tal" required="required" >
+                <label for="inp1">Telefone (com DDD)</label>
+                <input type="text" name="telefone" id="input-telefone" placeholder="(11)95485-5312" required="required">
+                <label for="inp1">E-mail</label>
+                <input type="text" name="email" id="input-email" placeholder="fulando@mail.com" required="required" pattern="[^@\s]+@[^@\s]+" title="e-mail inválido" >
+                <input type="submit" value="Submit">
+            </form>
+        </div>
     </div>
-    <script src="/script.js"></script>
+    <script>document.write('<script src="././script.js?dev=' + Math.floor(Math.random() * 100) + '"\><\/script>');</script>
+
 </body>
 </html>
