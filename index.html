@@ -5,27 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscrições instituto aliança</title>
     <!-- <link rel="stylesheet" href="./style.css?1"> -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
-<body>
-    <div class="container">
+<body class="preload">
+    <div class="container" id="container1">
         <div class="image">
             <img src="https://www.institutoalianca.org.br/boletim/julho14/materia3_julho14/ESV_BA_2.jpg" alt="">
         </div>
         <div class="form-wrapper">
-            <img src="https://i.imgur.com/ZtR3e8T.png" class="logo" alt="">
+            <img src="./images/logos/IA.png" class="logo" alt="">
             <h1>Cadastre-se</h1><br>
             <form method="post" id="form">
-                <label for="inp1">Nome</label>
+                <label for="inp1">Nome Completo</label>
                 <input type="text" name="nome" id="input-nome" placeholder="Fulano de tal" required="required" >
                 <label for="inp1">Telefone (com DDD)</label>
-                <input type="text" name="telefone" id="input-telefone" placeholder="(11)95485-5312" required="required">
+                <input type="text" name="telefone" id="input-telefone" placeholder="(11)95555-5555" required="required">
                 <label for="inp1">E-mail</label>
-                <input type="text" name="email" id="input-email" placeholder="fulando@mail.com" required="required" pattern="[^@\s]+@[^@\s]+" title="e-mail inválido" >
+                <input type="text" name="email" id="input-email" placeholder="fulano@mail.com" required="required" pattern="[^@\s]+@[^@\s]+" title="e-mail inválido" >
+                <input type="text" name="projeto" id="input-projeto" class="hidden" value="nenhum">
                 <input type="submit" value="Submit">
             </form>
         </div>
+        <div class="result">
+        </div>
     </div>
-    <script>document.write('<script src="././script.js?dev=' + Math.floor(Math.random() * 100) + '"\><\/script>');</script>
+    <div class="container" id="container2">
+        <div class="image">
+            <img src="https://www.institutoalianca.org.br/boletim/julho14/materia3_julho14/ESV_BA_2.jpg" alt="">
+        </div>
+        <div class="form-wrapper">
+            <h1>Complete sua inscrição</h1>
+            <span>Lorem ipsum dolor sit amet. Ut maxime mollitia et voluptatem tempore sit nemo eveniet. Et laudantium odio sit consequatur placeat ex cupiditate architecto. Et corporis nemo et quae rerum et doloribus dolor id laboriosam beatae. </span>
+            
+            <form method="post" id="form">
+                <h3>Informações pessoais</h3>
+                <label for="inp1">Nome Completo</label>
+                <input type="text" name="nome" id="input-nome-2" required="required"  placeholder="Fulano de tal" required="required" >
+                <label for="inp1">Telefone (com DDD)</label>
+                <input type="text" name="telefone" id="input-telefone-2" required="required" placeholder="(11)95555-5555" required="required">
+                <label for="inp1">E-mail</label>
+                <input type="text" name="email" id="input-email-2" required="required" placeholder="fulano@mail.com" required="required" pattern="[^@\s]+@[^@\s]+" title="e-mail inválido" >
+                <label for="inp1">Data de Nascimento</label>
+                <input type="date" name="nascimento" id="input-nascimento-2" required="required" placeholder="01/01/2000" required="required">
+                <label for="inp1">Escolaridade</label>
+                <select name="escolaridade" id="input-escolaridade-2" required="required">
+                    <option value="" disabled selected>Selecione a Escolaridade</option>
+                    <option value="2º Ano Ensino Médio">Cursando 2º Ano do Ensino Médio</option>
+                    <option value="3º Ano Ensino Médio">Cursando 3º Ano do Ensino Médio</option>
+                    <option value="Ensino Médio Concluído">Ensino Médio Concluído</option>
+                    <option value="Curso Técnico">Cursando Curso Técnico</option>
+                    <option value="Curso Técnico">Curso Técnico Concluído</option>
+                    <option value="Ensino Superior">Cursando Ensino Superior</option>
+                    <option value="Ensino Superior">Ensino Superior Concluído</option>
+                    <option value="Ensino Superior">Ensino Superior Incompleto</option>
+                </select>
+                <label for="inp1">Projeto</label>
+                <select type="text" name="projeto" required="required" id="input-projeto-2">
+                    <option value="" disabled selected>Selecione o Projeto</option>
+                </select>
+                
+                <h3>Endereço</h3>
+                <label for="inp1">Estado</label>
+                <select name="estado" id="input-estado-2" required="required">
+                    <option value="" disabled selected>Selecione o Estado</option>
+                    <option value="BA">Bahia</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="PE">Pernambuco</option>
+                </select>   
+                <label for="inp1">Cidade</label>
+                <input type="text" name="cidade" placeholder="Salvador" id="input-cidade-2" required="required">
+
+                <h3>Informações pessoais</h3>
+                <label for="inp1">Como você conheceu o projeto?</label>
+                <select name="cidade" id="input-cidade-2" required="required">
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="Redes Sociais">Redes Sociais</option>
+                    <option value="TV">TV</option>
+                    <option value="PE">Pernambuco</option>
+                </select>
+                <input type="submit" value="Submit">
+            </form>
+        
+
+            
+        </div>
+    </div>
+    <script>document.write('<script src="./project.js?dev=' + Math.floor(Math.random() * 100) + '"\><\/script>');</script>
+    <script>document.write('<script src="./script.js?dev=' + Math.floor(Math.random() * 100) + '"\><\/script>');</script>
     <script>document.write('<link rel="stylesheet" href="./style.css?' + Math.floor(Math.random() * 100) + '"\>');</script>
 </body>
 </html>

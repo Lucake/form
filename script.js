@@ -1,5 +1,8 @@
 let url = "https://docs.google.com/forms/d/e/1FAIpQLSftFYtf4wGYeHQq4oiqiUa2m-pXNkO7yZlyM7ztVeKarpWLgQ/formResponse"; //action url
-let form = document.querySelector("#form"); //form element
+let form = document.querySelector("#form");
+const CONTAINER1 = document.querySelector('#container1')
+const CONTAINER2 = document.querySelector('#container2')
+
 const formFields = [
     {
         "name":'nome',
@@ -16,12 +19,20 @@ const formFields = [
         "code":'entry.1842501334',
         "type":"input",
     },
+    {
+        "name":'projeto',
+        "code":'entry.713884241',
+        "type":"input",
+    },
 ]
 
 
+window.addEventListener('DOMContentLoaded', (event) => {
+    document.querySelector('body').classList.remove("preload");
+});
 
 form.addEventListener("submit", (e)=>{
-    e.preventDefault();//prevent default behaviour
+    e.preventDefault();
 
     fetch(url,{
         method: "POST",
@@ -33,22 +44,27 @@ form.addEventListener("submit", (e)=>{
     })
     .then(data=>{
         console.log(data);
-        alert("Enviado");
+        CONTAINER1.classList.toggle('closed')
         clearInputs()
     })
-    .catch(err=>console.error(err)); //promise based
+    .catch(err=>console.error(err));
 });
 
-//populating input data
+document.body.onkeyup = function(e) {
+    if(e.keyCode == 66){
+        window.scrollTo(0, 0)
+        CONTAINER1.classList.toggle('closed')
+    }
+}
+
+
 const getInputData = ()=>{
-    let dataToPost = new FormData(); //formdata API
-
-    //fill name attributes to corresponding values
+    let dataToPost = new FormData();
     formFields.forEach(e=>{
-        dataToPost.append(e.code, document.querySelector(`[name='${e.name}']`).value);
+        val = document.querySelector(`[name='${e.name}']`).value
+        dataToPost.append(e.code, val);
+        document.querySelector(`#container2 [name='${e.name}']`).value=val;
     })
-    
-
     return dataToPost;
 }
 
