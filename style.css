@@ -54,7 +54,7 @@ body {
 }
 
 body:has(.closed){
-    overflow-y:scroll;
+    overflow-y:auto;
 }
 
 .container{
@@ -76,6 +76,62 @@ body:has(.closed){
     animation: pushback .5s ease 1 forwards;
 }
 
+.container.loading .form-wrapper{
+    opacity:0;
+    height:1px;
+    transition: all .5s ease;
+}
+
+.container.loaded .form-wrapper{
+    display:none;
+}
+
+.container.loading .success{
+    display:block;
+    position:relative;
+}
+
+.container.loading .success >*{
+    opacity:0;
+}
+
+.container.loading .success .icon{
+    opacity:1;
+    position:absolute;
+    top:30%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    animation-name: spin;
+    animation-duration: 3000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display:block;
+}
+
+.container.loaded .success{
+    display:block;
+}
+
+.container.loaded .success> *{
+    opacity:1;
+}
+
+.container.loaded .success .icon{
+    display:none;
+    opacity:0;
+}
+
+.success
+{
+    padding:3rem 4rem;
+    display:none;
+}
+
+.success i{
+    font-size:3rem;
+    padding-bottom:1rem;
+}
+
 .form-wrapper{
     padding:3rem 4rem;
     min-width:400px;
@@ -83,7 +139,7 @@ body:has(.closed){
     text-align:center;
     background-color:var(--white);
     z-index:999;
-
+    overflow: hidden;
 }
 
 .image{
@@ -112,7 +168,7 @@ form{
 form label{
     font-size:1rem;
     margin-left:.6rem;
-    font-weight:500;
+    font-weight:600;
     background-color:var(--white);
     color:var(--primary);
     z-index:9;
@@ -125,7 +181,7 @@ form label:has(+input:focus){
     color:var(--black)
 }
 
-form label:has(+input:required):after{
+form label:has(+:required):after{
     content: '*';
     padding-right: 1px;
     font-size:1rem;
@@ -134,10 +190,11 @@ form label:has(+input:required):after{
 }
 
 
-form h3{
+form h2{
     color:var(--primary);
-    margin-bottom:.6rem;
+    margin-bottom:1.1rem;
     margin-top:1rem;
+    font-size:1.4rem;
 }
 
 form input,select{
@@ -155,13 +212,13 @@ form input,select{
 }
 
 form select:invalid , form input[type='date']:invalid{
-    color:rgba(0,0,0,0.3);
+    color:rgba(0,0,0,0.4);
 }
 
 form option{color:var(--primary)}
 
 form input::placeholder{
-    color:rgba(0,0,0,0.3);
+    color:rgba(0,0,0,0.4);
 }
 
 form input:focus{
@@ -202,9 +259,6 @@ form input[type="submit"]:hover{
     margin-block:.8rem;
 }
 
-#container2 form{
-    /* padding:1rem 1rem; */
-}
 
 .container.closed + #container2{
     left:50%;    
@@ -245,11 +299,20 @@ form input[type="submit"]:hover{
 
 }
 
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
 @media (max-width: 800px) {
     body{
         width:100vw;
         overflow-y:auto;
-        overflow-x:hidden;
+        overflow-x:auto;
         /* position:fixed; */
     }
     
@@ -261,8 +324,6 @@ form input[type="submit"]:hover{
       width:100vw;
       filter:none;
       animation:none;
-      height:100vh;
-      position:fixed;
       overflow-y:auto;
     }
 
@@ -295,6 +356,7 @@ form input[type="submit"]:hover{
         left:0;
         height:auto;
         position:absolute;
+        width:100vw;
     }
 
     #container2{
@@ -303,6 +365,7 @@ form input[type="submit"]:hover{
         transform:none;
         transition-delay:0s;
         height:100vh;
+        width:0px;
     }
 
     #container2 .form-wrapper{

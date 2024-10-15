@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +8,21 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body class="preload">
-    <div class="container" id="container1">
+    <div class="container" id="container1" role="main">
         <div class="image">
-            <img src="https://www.institutoalianca.org.br/boletim/julho14/materia3_julho14/ESV_BA_2.jpg" alt="">
+            <img src="images/photos/ia.jpg" alt="">
         </div>
         <div class="form-wrapper">
             <img src="./images/logos/IA.png" class="logo" alt="">
             <h1>Cadastre-se</h1><br>
             <form method="post" id="form">
-                <label for="inp1">Nome Completo</label>
-                <input type="text" name="nome" id="input-nome" placeholder="Fulano de tal" required="required" >
-                <label for="inp1">Telefone (com DDD)</label>
-                <input type="text" name="telefone" id="input-telefone" placeholder="(11)95555-5555" required="required">
-                <label for="inp1">E-mail</label>
-                <input type="text" name="email" id="input-email" placeholder="fulano@mail.com" required="required" pattern="[^@\s]+@[^@\s]+" title="e-mail inválido" >
-                <input type="text" name="projeto" id="input-projeto" class="hidden" value="nenhum">
+                <label for="input-nome">Nome Completo</label>
+                <input type="text" name="nome" id="input-nome" placeholder="Digite seu nome" required="required" maxlength="200">
+                <label for="input-telefone">Telefone (com DDD)</label>
+                <input type="text" name="telefone" id="input-telefone" placeholder="(11)95555-5555" required="required" maxlength="13" minlength="10">
+                <label for="input-email">E-mail</label>
+                <input type="text" name="email" id="input-email" placeholder="seuemail@mail.com" required="required" maxlength="200" pattern="[^@\s]+@[^@\s]+" title="e-mail inválido" >
+                <input type="text" name="projeto" id="input-projeto" class="hidden" value="nenhum" disabled>
                 <input type="submit" value="Submit">
             </form>
         </div>
@@ -31,23 +31,23 @@
     </div>
     <div class="container" id="container2">
         <div class="image">
-            <img src="https://www.institutoalianca.org.br/boletim/julho14/materia3_julho14/ESV_BA_2.jpg" alt="">
+            <img src="images/photos/ia.jpg" alt="">
         </div>
         <div class="form-wrapper">
             <h1>Complete sua inscrição</h1>
             <span>Lorem ipsum dolor sit amet. Ut maxime mollitia et voluptatem tempore sit nemo eveniet. Et laudantium odio sit consequatur placeat ex cupiditate architecto. Et corporis nemo et quae rerum et doloribus dolor id laboriosam beatae. </span>
             
-            <form method="post" id="form">
-                <h3>Informações pessoais</h3>
-                <label for="inp1">Nome Completo</label>
-                <input type="text" name="nome" id="input-nome-2" required="required"  placeholder="Fulano de tal" required="required" >
-                <label for="inp1">Telefone (com DDD)</label>
-                <input type="text" name="telefone" id="input-telefone-2" required="required" placeholder="(11)95555-5555" required="required">
-                <label for="inp1">E-mail</label>
-                <input type="text" name="email" id="input-email-2" required="required" placeholder="fulano@mail.com" required="required" pattern="[^@\s]+@[^@\s]+" title="e-mail inválido" >
-                <label for="inp1">Data de Nascimento</label>
-                <input type="date" name="nascimento" id="input-nascimento-2" required="required" placeholder="01/01/2000" required="required">
-                <label for="inp1">Escolaridade</label>
+            <form method="post" id="form2">
+                <h2>Informações pessoais</h2>
+                <label for="input-nome-2">Nome Completo</label>
+                <input type="text" name="nome-2" id="input-nome-2" required="required"  placeholder="Digite seu nome" maxlength="200">
+                <label for="input-telefone-2">Telefone (com DDD)</label>
+                <input type="text" name="telefone-2" id="input-telefone-2" required="required" placeholder="(11)95555-5555" maxlength="13" minlength="10">
+                <label for="input-email-2">E-mail</label>
+                <input type="text" name="email-2"-2 id="input-email-2" placeholder="seuemail@mail.com" required="required" pattern="[^@\s]+@[^@\s]+" maxlength="120" title="e-mail inválido" >
+                <label for="input-nascimento-2">Data de Nascimento</label>
+                <input type="date" name="nascimento" id="input-nascimento-2" placeholder="01/01/2000" required="required" min="1996-01-01" max="2024-01-01" title="Insira uma data de nascimento válida">
+                <label for="input-escolaridade-2">Escolaridade</label>
                 <select name="escolaridade" id="input-escolaridade-2" required="required">
                     <option value="" disabled selected>Selecione a Escolaridade</option>
                     <option value="2º Ano Ensino Médio">Cursando 2º Ano do Ensino Médio</option>
@@ -59,36 +59,48 @@
                     <option value="Ensino Superior">Ensino Superior Concluído</option>
                     <option value="Ensino Superior">Ensino Superior Incompleto</option>
                 </select>
-                <label for="inp1">Projeto</label>
-                <select type="text" name="projeto" required="required" id="input-projeto-2">
+                <label for="input-projeto-2">Projeto</label>
+                <select type="text" name="projeto-2" required="required" id="input-projeto-2">
                     <option value="" disabled selected>Selecione o Projeto</option>
                 </select>
                 
-                <h3>Endereço</h3>
-                <label for="inp1">Estado</label>
+                <h2>Endereço</h2>
+                <label for="input-estado-2">Estado</label>
                 <select name="estado" id="input-estado-2" required="required">
                     <option value="" disabled selected>Selecione o Estado</option>
                     <option value="BA">Bahia</option>
                     <option value="SP">São Paulo</option>
                     <option value="PE">Pernambuco</option>
                 </select>   
-                <label for="inp1">Cidade</label>
-                <input type="text" name="cidade" placeholder="Salvador" id="input-cidade-2" required="required">
+                <label for="input-cidade-2">Cidade</label>
+                <input type="text" name="cidade" placeholder="Sua cidade" id="input-cidade-2" required="required">
 
-                <h3>Informações pessoais</h3>
-                <label for="inp1">Como você conheceu o projeto?</label>
-                <select name="cidade" id="input-cidade-2" required="required">
+                <h2>Informações pessoais</h2>
+                <label for="input-como-soube-2">Como você conheceu o projeto?</label>
+                <select name="como-soube" id="input-como-soube-2" required="required">
                     <option value="" disabled selected>Selecione</option>
+                    <option value="Zurich">Zurich</option>
+                    <option value="Zurich Santander">Zurich Santander</option>
+                    <option value="Jornal">Jornal</option>
+                    <option value="TV/Rádio">TV/Rádio</option>
                     <option value="Redes Sociais">Redes Sociais</option>
-                    <option value="TV">TV</option>
-                    <option value="PE">Pernambuco</option>
+                    <option value="Amigos">Amigos</option>
+                    <option value="Família">Família</option>
+                    <option value="Jovem egresso">Jovem que participou e outras edições</option>
+                    <option value="Jovem participante">Indicação de jovens participantes</option>
+                    <option value="Bolsa Trabalho">Bolsa Trabalho</option>
+                    <option value="Divulgação da Prefeitura">Divulgação da Prefeitura</option>
+                    <option value="CIEE">CIEE</option>
+                    <option value="E-mail Instituto Aliança">E-mail Instituto Aliança</option>
                 </select>
                 <input type="submit" value="Submit">
             </form>
-        
-
-            
         </div>
+        <div class="success">
+            <i class="fa-regular fa-circle-check"></i>
+            <h1>Inscrição concluída</h1>
+            <span>Para dar continuidade no processo, aguarde o contato da equipe</span>
+            <i class="fa-solid fa-spinner icon"></i>
     </div>
     <script>document.write('<script src="./project.js?dev=' + Math.floor(Math.random() * 100) + '"\><\/script>');</script>
     <script>document.write('<script src="./script.js?dev=' + Math.floor(Math.random() * 100) + '"\><\/script>');</script>

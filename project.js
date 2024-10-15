@@ -8,7 +8,7 @@ const projects = {
     cdd:{
         name:'Com.Dominio digital',
         logo:'./images/logos/cdd.png',
-        image:'./images/photos/esv.jpg', 
+        image:'./images/photos/cdd.jpg', 
         color:'#027DBA',
     },
     esv:{
@@ -31,6 +31,7 @@ const states = {
 const LOGO = document.querySelector('.logo')
 const BG_IMG = document.querySelector('.image img')
 const PROJECT_FIELD = document.querySelector('#input-projeto');
+const PROJECT_FIELD2 = document.querySelector('#input-projeto-2');
 
 
 const changeProject = (project_name)=>{
@@ -38,6 +39,8 @@ const changeProject = (project_name)=>{
     BG_IMG.src = projects[project_name].image;
     document.documentElement.style.setProperty('--primary', projects[project_name].color);
     PROJECT_FIELD.value = projects[project_name].name;
+    PROJECT_FIELD2.value = projects[project_name].name;
+    PROJECT_FIELD2.disabled = true;
 }
 
 const getUrlParameter = (param)=>{
@@ -58,6 +61,7 @@ const appendProjectsField = ()=>{
 }
 
 window.addEventListener('DOMContentLoaded', (event) => {
+    appendProjectsField()
     projeto = getUrlParameter('projeto')
     if(projeto){
         changeProject(projeto)
