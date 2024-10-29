@@ -66,5 +66,4 @@ window.addEventListener('DOMContentLoaded', (event) => {
     if(projeto){
         changeProject(projeto)
     }
-    appendProjectsField()
 });
