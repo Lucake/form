@@ -74,6 +74,11 @@ const formFields2 = [
         "code":'entry.322928398',
         "type":"input",
     },
+    {
+        "name":'turma',
+        "code":'entry.1479635839',
+        "type":"input",
+    },
 ]
 
 window.addEventListener('DOMContentLoaded', (event) => {
@@ -82,7 +87,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
-  }
+}
+
 //form 1
 form.addEventListener("submit", (e)=>{
     e.preventDefault();
@@ -142,9 +148,9 @@ const isForm1= () => {
 }
 
  
-document.body.onkeyup = function(e) {
-    if(e.keyCode == 66){
-        window.scrollTo(0, 0)
-        CONTAINER1.classList.toggle('closed')
-    }
-}
+// document.body.onkeyup = function(e) {
+//     if(e.keyCode == 66){
+//         window.scrollTo(0, 0)
+//         CONTAINER1.classList.toggle('closed')
+//     }
+// }

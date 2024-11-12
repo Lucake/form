@@ -6,7 +6,8 @@
     <title>Inscrições instituto aliança</title>
     <!-- <link rel="stylesheet" href="./style.css?1"> -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-</head>
+     <link rel="stylesheet" href="./style.css?346523"\>
+    </head>
 <body class="preload">
     <div class="container" id="container1" role="main">
         <div class="image">
@@ -35,7 +36,6 @@
         </div>
         <div class="form-wrapper">
             <h1>Complete sua inscrição</h1>
-            <span>Lorem ipsum dolor sit amet. Ut maxime mollitia et voluptatem tempore sit nemo eveniet. Et laudantium odio sit consequatur placeat ex cupiditate architecto. Et corporis nemo et quae rerum et doloribus dolor id laboriosam beatae. </span>
             
             <form method="post" id="form2">
                 <h2>Informações pessoais</h2>
@@ -67,13 +67,16 @@
                 <h2>Endereço</h2>
                 <label for="input-estado-2">Estado</label>
                 <select name="estado" id="input-estado-2" required="required">
-                    <option value="" disabled selected>Selecione o Estado</option>
-                    <option value="BA">Bahia</option>
-                    <option value="SP">São Paulo</option>
-                    <option value="PE">Pernambuco</option>
+                    <option value="" disabled selected>Selecione um projeto válido</option>
                 </select>   
                 <label for="input-cidade-2">Cidade</label>
                 <input type="text" name="cidade" placeholder="Sua cidade" id="input-cidade-2" required="required">
+
+                <label for="input-turma-2">Você está se inscrevendo para:</label>
+                <select name="turma" id="input-turma-2" required="required">
+                    <option value="" disabled selected>Selecione um projeto válido</option>
+                </select>   
+
 
                 <h2>Informações pessoais</h2>
                 <label for="input-como-soube-2">Como você conheceu o projeto?</label>
@@ -106,6 +109,6 @@
     </div>
     <script>document.write('<script src="./project.js?dev=' + Math.floor(Math.random() * 100) + '"\><\/script>');</script>
     <script>document.write('<script src="./script.js?dev=' + Math.floor(Math.random() * 100) + '"\><\/script>');</script>
-    <script>document.write('<link rel="stylesheet" href="./style.css?' + Math.floor(Math.random() * 100) + '"\>');</script>
+    <!-- <script>document.write('<link rel="stylesheet" href="./style.css?' + Math.floor(Math.random() * 100) + '"\>');</script> -->
 </body>
 </html>
