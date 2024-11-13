@@ -148,9 +148,9 @@ const isForm1= () => {
 }
 
  
-// document.body.onkeyup = function(e) {
-//     if(e.keyCode == 66){
-//         window.scrollTo(0, 0)
-//         CONTAINER1.classList.toggle('closed')
-//     }
-// }
+document.body.onkeyup = function(e) {
+    if(e.keyCode == 66){
+        window.scrollTo(0, 0)
+        CONTAINER1.classList.toggle('closed')
+    }
+}
