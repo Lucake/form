@@ -14,7 +14,7 @@
             <img src="images/photos/ia.jpg" alt="">
         </div>
         <div class="form-wrapper">
-            <img src="./images/logos/IA.png" class="logo" alt="">
+            <img src="./images/logos/IA.png" class="logo" alt="" id="logo">
             <h1>Cadastre-se</h1><br>
             <form method="post" id="form">
                 <label for="input-nome">Nome Completo</label>
@@ -35,6 +35,8 @@
             <img src="images/photos/ia.jpg" alt="">
         </div>
         <div class="form-wrapper">
+            
+            <img src="./images/logos/IA.png" class="logo" alt="" id="logo2">
             <h1>Complete sua inscrição</h1>
             
             <form method="post" id="form2">
@@ -46,7 +48,7 @@
                 <label for="input-email-2">E-mail</label>
                 <input type="text" name="email-2"-2 id="input-email-2" placeholder="seuemail@mail.com" required="required" pattern="[^@\s]+@[^@\s]+" maxlength="120" title="e-mail inválido" >
                 <label for="input-nascimento-2">Data de Nascimento</label>
-                <input type="date" name="nascimento" id="input-nascimento-2" placeholder="01/01/2000" required="required" min="1996-01-01" max="2024-01-01" title="Insira uma data de nascimento válida">
+                <input type="date" name="nascimento" id="input-nascimento-2" placeholder="01/01/2000" required="required" min="1994-01-01" max="2024-01-01" title="Insira uma data de nascimento válida">
                 <label for="input-escolaridade-2">Escolaridade</label>
                 <select name="escolaridade" id="input-escolaridade-2" required="required">
                     <option value="" disabled selected>Selecione a Escolaridade</option>
@@ -104,8 +106,8 @@
             <span>Para dar continuidade no processo, aguarde o contato da equipe</span>
             <i class="fa-solid fa-spinner icon"></i>
     </div>
-    <script>document.write('<script src="./project.js?dev=' + Math.floor(Math.random() * 100) + '"\><\/script>');</script>
-    <script>document.write('<script src="./script.js?dev=' + Math.floor(Math.random() * 100) + '"\><\/script>');</script>
+    <script>document.write('<script type="module" src="./project.js?dev=' + Math.floor(Math.random() * 100) + '"\><\/script>');</script>
+    <script>document.write('<script type="module" src="./script.js?dev=' + Math.floor(Math.random() * 100) + '"\><\/script>');</script>
     <!-- <script>document.write('<link rel="stylesheet" href="./style.css?' + Math.floor(Math.random() * 100) + '"\>');</script> -->
 </body>
 </html>
