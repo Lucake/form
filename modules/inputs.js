@@ -35,6 +35,15 @@ const setTurmaOptions = (projectName) => {
   });
 };
 
+const filterTurma = (state) => {
+  const SELECT = document.querySelector("#input-turma-2");
+  SELECT.querySelector("option").selected = true;
+  SELECT.querySelectorAll("option").forEach((opt) => (opt.hidden = false));
+  SELECT.querySelectorAll(
+    `option:not([data-state="${state}"]):not(:disabled)`
+  ).forEach((opt) => (opt.hidden = true));
+};
+
 const setEstadoOptions = (projectName) => {
   const SELECT = document.querySelector("#input-estado-2");
   SELECT.innerHTML =
@@ -45,5 +54,9 @@ const setEstadoOptions = (projectName) => {
     const div = document.createElement("div");
     div.innerHTML = htmlString;
     SELECT.append(div.firstChild);
+  });
+
+  SELECT.addEventListener("change", (e) => {
+    filterTurma(SELECT.value);
   });
 };
