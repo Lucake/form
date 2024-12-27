@@ -3,7 +3,7 @@ import { projects } from "./modules/project_data.js";
 import { initProject } from "./modules/project.js";
 import { initProjectsInput } from "./modules/inputs.js";
 import { setupMobilizador } from "./modules/mobilizador.js";
-import { fill_full_form } from "./modules/testing_tools.js";
+import { debug } from "./modules/testing_tools.js";
 
 const DEBUG = true;
 
@@ -28,7 +28,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
     initProject(projeto);
   }
 
-  if (DEBUG) fill_full_form();
+  if (DEBUG) {
+    debug();
+  }
 });
 
 window.onbeforeunload = function () {

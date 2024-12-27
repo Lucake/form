@@ -1,3 +1,14 @@
+export const debug = () => {
+  if (
+    location.hostname === "localhost" ||
+    location.hostname === "127.0.0.1" ||
+    location.hostname === ""
+  ) {
+    fill_full_form();
+    change_section();
+  }
+};
+
 export const fill_initial_form = () => {
   document.querySelector('input[name="nome"]').value =
     "teste" + Math.round(Math.random() * 100);
@@ -13,18 +24,20 @@ export const fill_full_form = () => {
   document.querySelector('input[name="email-2"]').value = "teste@teste.com";
   document.querySelector('input[name="nascimento"]').value = "1996-09-30";
   document.querySelector('input[name="cidade"]').value = "Teste";
+  document.querySelector(
+    'select[name="escolaridade"] option:nth-child(2)'
+  ).selected = true;
+  document.querySelector(
+    'select[name="estado"] option:nth-child(2)'
+  ).selected = true;
 };
 
-const CONTAINER1 = document.querySelector("#container1");
-document.body.onkeyup = function (e) {
-  if (e.keyCode == 66) {
-    if (
-      location.hostname === "localhost" ||
-      location.hostname === "127.0.0.1" ||
-      location.hostname === ""
-    ) {
+const change_section = () => {
+  const CONTAINER1 = document.querySelector("#container1");
+  document.body.onkeyup = function (e) {
+    if (e.keyCode == 66) {
       window.scrollTo(0, 0);
       CONTAINER1.classList.toggle("closed");
     }
-  }
+  };
 };
