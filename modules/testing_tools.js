@@ -14,3 +14,17 @@ export const fill_full_form = () => {
   document.querySelector('input[name="nascimento"]').value = "1996-09-30";
   document.querySelector('input[name="cidade"]').value = "Teste";
 };
+
+const CONTAINER1 = document.querySelector("#container1");
+document.body.onkeyup = function (e) {
+  if (e.keyCode == 66) {
+    if (
+      location.hostname === "localhost" ||
+      location.hostname === "127.0.0.1" ||
+      location.hostname === ""
+    ) {
+      window.scrollTo(0, 0);
+      CONTAINER1.classList.toggle("closed");
+    }
+  }
+};
