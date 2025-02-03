@@ -5,7 +5,7 @@ import { initProjectsInput } from "./modules/inputs.js";
 import { setupMobilizador } from "./modules/mobilizador.js";
 import { debug } from "./modules/testing_tools.js";
 
-const DEBUG = true;
+const DEBUG = false;
 
 const getUrlParameter = (param) => {
   const project = window.location.search;
