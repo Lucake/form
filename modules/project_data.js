@@ -61,6 +61,10 @@ export const projects = {
         state: "São Paulo",
         city: "São Paulo",
       },
+      {
+        state: "Ceará",
+        city: "Itaitinga",
+      },
     ],
   },
 };
