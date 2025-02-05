@@ -57,6 +57,19 @@ body:has(.closed) {
     overflow-y: auto;
 }
 
+h1 {
+    margin-bottom: 1rem
+}
+
+span {
+    font-size: 1.2rem;
+}
+
+a {
+    color: var(--primary);
+    font-weight: 900;
+}
+
 .container {
     width: 100%;
     max-width: 850px;
@@ -343,6 +356,7 @@ form #input-projeto-2:disabled {
         top: 0;
         left: 0;
         width: 100vw;
+        min-height: 100%;
         filter: none;
         animation: none;
         overflow-y: auto;
@@ -375,6 +389,10 @@ form #input-projeto-2:disabled {
         height: auto;
         position: absolute;
         width: 100vw;
+    }
+
+    .container.loaded .success {
+        height: webkit-fill-available;
     }
 
     #container2 {

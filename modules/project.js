@@ -1,5 +1,6 @@
 import { projects } from "./project_data.js";
 import { updateInputs } from "./inputs.js";
+import { updateConclusionMessage } from "./conclusion_message.js";
 
 const LOGO = document.querySelector("#logo");
 const BG_IMG = document.querySelector(".image img");
@@ -17,4 +18,5 @@ export const initProject = (projectName) => {
   PROJECT_FIELD2.value = projects[projectName].name;
   PROJECT_FIELD2.disabled = true;
   updateInputs(projectName);
+  updateConclusionMessage(projects[projectName].message);
 };
