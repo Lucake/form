@@ -1,4 +1,4 @@
-export const setupMobilizador = (mobilizador) => {
+export const initInputs = (mobilizador) => {
   const COMO_SOUBE = document.querySelector("#input-como-soube-2");
   COMO_SOUBE.querySelector("option").value = "Mobilizador: " + mobilizador;
   COMO_SOUBE.querySelector("option").text = mobilizador;
